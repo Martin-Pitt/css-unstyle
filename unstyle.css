@@ -1,0 +1,113 @@
+/*
+	unstyle.css
+	-----------
+	Stylesheet designed to undo useragent styling to leave you a pure, semantic HTML.
+	Compatibility is generally aimed at modern browsers + ≥IE7.
+	
+	Created by  	Martin Pitt  	(MIT License | martinpitt.co.uk)
+	Inspired by 	normalize.css	(MIT License | git.io/normalize)
+*/
+
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { padding: 0; margin: 0; }
+
+section, article,
+header, main, footer,
+aside, details,
+nav, menu,
+figure, figcaption { display: block; }
+
+canvas, video, audio, progress { vertical-align: baseline; display: inline-block; *display: inline; *zoom: 1; }
+
+template, audio:not([controls]), [hidden] { display: none; height: 0; }
+
+button { width: auto; overflow: visible; }
+button, input, select, textarea { border-radius: 0; margin: 0; font-size: 100%; vertical-align: middle; }
+button, input { line-height: normal; }
+button::-moz-focus-inner, input::-moz-focus-inner { padding: 0; border: 0; }
+button, input[type="button"], input[type="reset"], input[type="submit"], select { color: inherit; border: none; padding: 0; outline: 0; -webkit-appearance: none; //color:expression(this.parentNode.currentStyle['color']); }
+button, input[type="button"], input[type="reset"], input[type="submit"], input[type="checkbox"],
+label, select { cursor: pointer; }
+
+input[type="search"] { -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; -webkit-appearance: textfield; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { height: auto; }
+
+/*TODO: Scrape sweet IE7+ unstyling of select/input[type=text]/textarea elements from my other projects*/
+
+fieldset { display: block; border: none; padding: 0; margin: 0; }
+legend { border: 0; padding: 0; }
+
+textarea { vertical-align: top; }
+textarea, pre { overflow: auto; }
+
+ul, li, menu, dir { padding: 0; margin: 0; list-style: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+td, th { padding: 0; }
+
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+
+a, a:hover, a:active { color: inherit; //color:expression(this.parentNode.currentStyle['color']); text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: inherit; font-size: inherit; margin: 0; //font-weight:expression(this.parentNode.currentStyle['font-weight']); //font-size:expression(this.parentNode.currentStyle['font-size']); }
+
+em, strong, small, code, kbd, pre, samp { font-size: inherit; font-style: inherit; font-weight: inherit; //font-size:expression(this.parentNode.currentStyle['font-size']); //font-style:expression(this.parentNode.currentStyle['font-style']); //font-weight:expression(this.parentNode.currentStyle['font-weight']); }
+
+p { display: inline-block; *display: inline; *zoom: 1; margin: 0; }
+b { font-weight: bolder; }
+i { font-style: italic; }
+img { border: 0; }
+
+/* Fix sub/sup to match Photoshop algorithms */
+sup, sub { line-height: 0; vertical-align: middle; font-size: 58.3%; position: relative; }
+/* ~33.3% up or down for superscript and subscript */
+sup { top: -0.33333em; }
+sub { top: 0.33333em; }
+
+
+
+/*
+	Below can be customised per projects
+	1. Predictable box model [Firefox ≥1.0, Chrome ≥0.2, Safari ≥3, IE ≥8, Opera ≥7]
+	2. Disable some default behaviours of touch devices (selecting text, popup menus)
+	3. Base page layout
+*/
+* {
+	/*1*/
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	*behavior: url(css/boxsizing.htc); /* See: http://git.io/I17vuw */
+	
+	/*2*/
+	-webkit-touch-callout: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-khtml-user-select: none;
+	-moz-user-select: -moz-none;
+	-ms-user-select: none;
+	-ms-touch-action: none;
+	user-select: none;
+}
+
+/*3*/
+html, body {
+	/* Stretch to viewport */
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	/* Allow vertical scroll */
+	overflow-x: hidden;
+	overflow-y: scroll;
+	
+	/* Disable bounce */
+/* 	overflow: hidden; */
+}
+
