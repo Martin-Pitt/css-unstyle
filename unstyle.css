@@ -2,7 +2,10 @@
 	unstyle.css
 	-----------
 	Stylesheet designed to undo useragent styling to leave you a pure, semantic HTML.
-	Compatibility is generally aimed at modern browsers + ≥IE7.
+	Compatibility is towards modern browsers plus IE 7 and greater.
+	The compatibility is skewed towards users in large enterprises, in the following descending priority:
+		[Chrome, Firefox, IE ≥7, Safari ≥5, Android ≥4]
+	
 	
 	Created by  	Martin Pitt  	(MIT License | martinpitt.co.uk)
 	Inspired by 	normalize.css	(MIT License | git.io/normalize)
