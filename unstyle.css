@@ -45,7 +45,7 @@ legend { border: 0; padding: 0; }
 textarea { vertical-align: top; }
 textarea, pre { overflow: auto; }
 
-ul, li, menu, dir { padding: 0; margin: 0; list-style: none; }
+ol, ul, li, menu, dir { padding: 0; margin: 0; list-style: none; }
 table { border-collapse: collapse; border-spacing: 0; }
 td, th { padding: 0; }
 
