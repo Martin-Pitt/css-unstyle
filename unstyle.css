@@ -80,6 +80,7 @@ sub { top: 0.33333em; }
 	1. Predictable box model [Firefox ≥1.0, Chrome ≥0.2, Safari ≥3, IE ≥8, Opera ≥7]
 	- For IE7/6 support, see *behaviour line & http://git.io/I17vuw
 	2. Disable some default behaviours of touch devices (selecting text, popup menus)
+	2.1 Still allow inputs and textarea to capture keyboard input (Mobile Safari)
 	3. Base page layout
 */
 * {
@@ -101,6 +102,12 @@ sub { top: 0.33333em; }
 	user-select: none;
 }
 
+/*2.1*/
+input, textarea {
+	-webkit-user-select: auto;
+}
+
+
 /*3*/
 html, body {
 	/* Stretch to viewport */
@@ -116,4 +123,5 @@ body {
 	/* Disable bounce */
 /* 	overflow: hidden; */
 }
+
 
