@@ -8,23 +8,15 @@
 	
 	
 	Created by  	Martin Pitt  	(MIT License | martinpitt.co.uk)
-	Inspired by 	normalize.css	(MIT License | git.io/normalize)
+	Inspired by 	normalize.css	(MIT License | https://necolas.github.io/normalize.css/)
+	
+	
+	Feel free to customise for your projects.
 */
 
-
-html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-body { padding: 0; margin: 0; }
-
-section, article,
-header, main, footer,
-aside, details, address,
-nav, menu,
-figure, figcaption { display: block; }
-
+section, article, header, main, footer, aside, details, address, nav, menu, figure, figcaption { display: block; }
 canvas, video, audio, progress { vertical-align: baseline; display: inline-block; *display: inline; *zoom: 1; }
-
-template, audio:not([controls]), [hidden] { display: none; height: 0; }
-
+template, audio:not([controls]), [hidden], datalist { display: none; height: 0; }
 button { width: auto; overflow: visible; }
 button, input, select, textarea { border-radius: 0; margin: 0; font-size: 100%; vertical-align: middle; }
 button, input { line-height: normal; }
@@ -51,7 +43,7 @@ ol, ul, li, dl, dt, dd, menu, dir { padding: 0; margin: 0; list-style: none; }
 table { border-collapse: collapse; border-spacing: 0; }
 td, th { padding: 0; }
 
-hr { box-sizing: content-box; height: 0; }
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
 
 a, a:hover, a:active { color: inherit; //color:expression(this.parentNode.currentStyle['color']); text-decoration: none; }
 
@@ -59,12 +51,11 @@ h1, h2, h3, h4, h5, h6 { font-weight: inherit; font-size: inherit; margin: 0; //
 
 em, strong, small, code, kbd, pre, samp { font-size: inherit; font-style: inherit; font-weight: inherit; //font-size:expression(this.parentNode.currentStyle['font-size']); //font-style:expression(this.parentNode.currentStyle['font-style']); //font-weight:expression(this.parentNode.currentStyle['font-weight']); }
 
-blockquote, pre { margin: 0; }
-p { display: inline-block; *display: inline; *zoom: 1; margin: 0; }
+blockquote, pre, figure { margin: 0; }
+p { display: block; margin: 0; }
 b { font-weight: bolder; }
 i { font-style: italic; }
 img { border: 0; }
-figure { margin: 0; }
 svg:not(:root) { overflow: hidden; }
 
 /* Fix sub/sup to match Photoshop algorithms */
@@ -73,24 +64,24 @@ sup, sub { line-height: 0; vertical-align: middle; font-size: 58.3%; position: r
 sup { top: -0.33333em; }
 sub { top: 0.33333em; }
 
-
+html, body { height: 100%; width: 100%; }
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; line-height: 1.25; }
+body { padding: 0; margin: 0; overflow-x: hidden; overflow-y: scroll; }
 
 /*
-	Below can be customised per projects
-	1. Predictable box model [Firefox ≥1.0, Chrome ≥0.2, Safari ≥3, IE ≥8, Opera ≥7]
-	- For IE7/6 support, see *behaviour line & http://git.io/I17vuw
-	2. Disable some default behaviours of touch devices (selecting text, popup menus)
-	2.1 Still allow inputs and textarea to capture keyboard input (Mobile Safari)
-	3. Base page layout
+	Predictable box model [Firefox ≥1.0, Chrome ≥0.2, Safari ≥3, IE ≥8, Opera ≥7]
+	#1 For IE7/6 support, see *behaviour line & http://git.io/I17vuw (Path must be relative to HTML file!)
+	#2 For mobile web apps if you wish to manually define interactions
 */
 * {
-	/*1*/
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	*behavior: url(css/boxsizing.htc); /* Path must be relative to HTML file! See: http://git.io/I17vuw */
+	/*1* /
+	*behavior: url(css/boxsizing.htc);
+	/**/
 	
-	/*2*/
+	/*2* /
 	-webkit-touch-callout: none;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
@@ -100,28 +91,7 @@ sub { top: 0.33333em; }
 	-ms-user-select: none;
 	-ms-touch-action: none;
 	user-select: none;
+	/**/
 }
-
-/*2.1*/
-input, textarea {
-	-webkit-user-select: auto;
-}
-
-
-/*3*/
-html, body {
-	/* Stretch to viewport */
-	height: 100%;
-	width: 100%;
-}
-
-body {
-	/* Allow vertical scroll */
-	overflow-x: hidden;
-	overflow-y: scroll;
-	
-	/* Disable bounce */
-/* 	overflow: hidden; */
-}
-
-
+/* If you enable #2 then enable the below to fix bug with Mobile Safari */
+/*input, textarea { -webkit-user-select: auto; }*/
