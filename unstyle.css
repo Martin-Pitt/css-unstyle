@@ -56,6 +56,7 @@ p { display: block; margin: 0; }
 b { font-weight: bolder; }
 i { font-style: italic; }
 img { border: 0; }
+svg { fill: currentColor; }
 svg:not(:root) { overflow: hidden; }
 
 /* Fix sub/sup to match Photoshop algorithms */
