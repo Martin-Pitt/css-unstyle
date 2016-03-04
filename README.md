@@ -2,6 +2,7 @@
 
 Specialised stylesheet for removing user agent styles.
 
+For a demo against the HTML5 Kitchen Sink: http://codepen.io/nexii/pen/WwQXZe?editors=1100
 
 ## Install
 
