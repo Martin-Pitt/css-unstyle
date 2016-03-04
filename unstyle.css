@@ -21,7 +21,7 @@ button { width: auto; overflow: visible; }
 button, input, select, textarea { border-radius: 0; margin: 0; font-size: 100%; vertical-align: middle; }
 button, input { line-height: normal; }
 button::-moz-focus-inner, input::-moz-focus-inner { padding: 0; border: 0; }
-button, input[type="button"], input[type="reset"], input[type="submit"], select { color: inherit; border: 0; padding: 0; outline: 0; -webkit-appearance: none; //color:expression(this.parentNode.currentStyle['color']); }
+button, input[type="button"], input[type="reset"], input[type="submit"], select { color: inherit; border: 0; padding: 0; outline: 0; -webkit-appearance: none; background: none; //color:expression(this.parentNode.currentStyle['color']); }
 button, input[type="button"], input[type="reset"], input[type="submit"], input[type="checkbox"],
 label, select { cursor: pointer; }
 abbr { border: 0; }
@@ -49,7 +49,7 @@ a, a:hover, a:active { color: inherit; //color:expression(this.parentNode.curren
 
 h1, h2, h3, h4, h5, h6 { font-weight: inherit; font-size: inherit; margin: 0; //font-weight:expression(this.parentNode.currentStyle['font-weight']); //font-size:expression(this.parentNode.currentStyle['font-size']); }
 
-em, strong, small, code, kbd, pre, samp { font-size: inherit; font-style: inherit; font-weight: inherit; //font-size:expression(this.parentNode.currentStyle['font-size']); //font-style:expression(this.parentNode.currentStyle['font-style']); //font-weight:expression(this.parentNode.currentStyle['font-weight']); }
+address, em, strong, small, code, kbd, pre, samp { font-size: inherit; font-style: inherit; font-weight: inherit; //font-size:expression(this.parentNode.currentStyle['font-size']); //font-style:expression(this.parentNode.currentStyle['font-style']); //font-weight:expression(this.parentNode.currentStyle['font-weight']); }
 
 blockquote, pre, figure { margin: 0; }
 p { display: block; margin: 0; }
@@ -65,7 +65,7 @@ sup { top: -0.33333em; }
 sub { top: 0.33333em; }
 
 html, body { height: 100%; width: 100%; }
-html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; line-height: 1.25; }
+html { font: 100%/1.25 sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 body { padding: 0; margin: 0; overflow-x: hidden; overflow-y: scroll; }
 
 /*
