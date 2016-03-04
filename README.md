@@ -37,6 +37,13 @@ Thus the goal of unstyle.css is to:
 - give you peace of mind
 
 
+## Contributing
+
+If you feel something is off, feel free to fire an issue.
+
+Pull Requests are welcome. However if I can't pull it (e.g. doesn't match goals), I encourage you to have your own fork :)
+
+
 ## This sounds great but what are the gotchas?
 
 It is not all-encompassing, I had to skip `input` and other form unstyling as there are harsh browser limitations with CSS on those, which would otherwise make unstyle.css too opinionated by itself.
