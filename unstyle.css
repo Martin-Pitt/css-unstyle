@@ -14,8 +14,7 @@
 	Feel free to customise for your projects.
 */
 
-section, article, header, main, footer, aside, details, address, nav, menu, figure, figcaption { display: block; }
-canvas, video, audio, progress { vertical-align: baseline; display: inline-block; *display: inline; *zoom: 1; }
+section, article, header, main, footer, aside, details, address, nav, menu, figure, figcaption, canvas, video, audio, progress { display: block; }
 template, audio:not([controls]), [hidden], datalist { display: none; height: 0; }
 button { width: auto; overflow: visible; }
 button, input, select, textarea { border-radius: 0; margin: 0; font-size: 100%; vertical-align: middle; }
