@@ -4,7 +4,7 @@ Specialised stylesheet for removing user agent styles.
 
 For a demo against the HTML5 Kitchen Sink: http://codepen.io/nexii/pen/WwQXZe?editors=1100
 
-## Install
+## Install
 
 1. Download [unstyle.css](unstyle.css)
 2. Link as first stylesheet:
@@ -13,15 +13,14 @@ For a demo against the HTML5 Kitchen Sink: http://codepen.io/nexii/pen/WwQXZe?ed
 <link rel="stylesheet" href="css/unstyle.css">
 ```
 
-
-## Why?
+## Why?
 
 I believe that by starting from scratch, a blank canvas, we can be free to style the web without the burden of legacy.
 
 As web developers we constantly try to layer our own baseline on the web. Having worked on many lightweight websites and webapps I found however being able to start from ground zero, without useragent styles dictating the baseline, I was able to prototype faster and also build more maintainable websites.
 
 
-## What makes this different from Reset or Normalize?
+## What makes this different from Reset or Normalize?
 
 Rather than serving a baseline or working around inconsistencies, this stylesheet instead seeks to undo all historical legacy browser styles. Giving you a clean slate, so that for example `<h1>`, `<h2>`, `<h3>`, etc, behave and look like a margin-free `<p>`.
 
