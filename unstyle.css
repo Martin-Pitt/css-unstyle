@@ -14,6 +14,12 @@
 	Feel free to customise for your projects.
 */
 
+
+* {
+	all: unset;
+	box-sizing: border-box;
+}
+
 section, article, header, main, footer, aside, details, address, nav, menu, figure, figcaption, canvas, video, audio, progress { display: block; }
 template, audio:not([controls]), [hidden], datalist { display: none; height: 0; }
 button { width: auto; overflow: visible; }
@@ -67,7 +73,3 @@ sub { top: 0.33333em; }
 html, body { height: 100%; width: 100%; }
 html { font: 100%/1.25 sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-rendering: optimizeLegibility; -webkit-font-smoothing: subpixel-antialiased; text-overflow: ellipsis; }
 body { padding: 0; margin: 0; overflow-x: hidden; overflow-y: scroll; }
-
-* {
-	box-sizing: border-box;
-}
