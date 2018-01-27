@@ -1,75 +1,115 @@
-/*
-	unstyle.css
-	-----------
-	Stylesheet designed to undo useragent styling to leave you a pure, semantic HTML.
-	Compatibility is towards modern browsers plus IE 7 and greater.
-	The compatibility is skewed towards users in large enterprises, in the following descending priority:
-		[Chrome, Firefox, IE ≥7, Safari ≥5, Android ≥4]
-	
-	
-	Created by  	Martin Pitt  	(MIT License | martinpitt.co.uk)
-	Inspired by 	normalize.css	(MIT License | https://necolas.github.io/normalize.css/)
-	
-	
-	Feel free to customise for your projects.
-*/
-
+/* Unstyle.css, pure HTML semantics */
 
 * {
-	all: unset;
 	box-sizing: border-box;
+	padding: unset;
+	border: unset;
+	margin: unset;
+	color: inherit;
+	font: inherit;
 }
 
-section, article, header, main, footer, aside, details, address, nav, menu, figure, figcaption, canvas, video, audio, progress { display: block; }
-template, audio:not([controls]), [hidden], datalist { display: none; height: 0; }
-button { width: auto; overflow: visible; }
-button, input, select, textarea { border-radius: 0; margin: 0; font-size: 100%; vertical-align: middle; }
-button, input { line-height: normal; }
-button::-moz-focus-inner, input::-moz-focus-inner { padding: 0; border: 0; }
-button, input[type="button"], input[type="reset"], input[type="submit"], select { color: inherit; border: 0; padding: 0; outline: 0; -webkit-appearance: none; background: none; }
-button, input[type="button"], input[type="reset"], input[type="submit"], input[type="checkbox"],
-label, select { cursor: pointer; }
-abbr { border: 0; }
+section, article, header, main, footer, aside, p, details, address, nav, figure, figcaption, canvas, img, video, audio, progress, fieldset, legend {
+	display: block;
+}
 
-input[type="search"] { box-sizing: content-box; -webkit-appearance: textfield; }
+button, input, select {
+	unset: all;
+	display: inline-block;
+	cursor: pointer;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+input[type="search"] {
+	box-sizing: content-box;
+	-webkit-appearance: textfield;
+}
 input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
-
+input[type="search"]::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+}
 input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button { height: auto; }
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
 
-fieldset { display: block; border: 0; padding: 0; margin: 0; }
-legend { border: 0; padding: 0; }
+textarea {
+	border-radius: 0;
+	vertical-align: top;
+}
 
-textarea { vertical-align: top; }
-textarea, pre { overflow: auto; }
+textarea, pre {
+	overflow: auto;
+}
 
-ol, ul, li, dl, dt, dd, menu, dir { padding: 0; margin: 0; list-style: none; }
-table { border-collapse: collapse; border-spacing: 0; }
-td, th { padding: 0; }
+ol, ul, li, dl, dt, dd {
+	list-style: none;
+}
 
-hr { box-sizing: content-box; height: 0; }
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
-a, a:hover, a:active { color: inherit; text-decoration: none; }
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
 
-h1, h2, h3, h4, h5, h6 { font-weight: inherit; font-size: inherit; margin: 0; }
+a, a:hover, a:active {
+	text-decoration: none;
+}
 
-address, em, strong, small, code, kbd, pre, samp { font-size: inherit; font-style: inherit; font-weight: inherit; }
+b {
+	font-weight: bolder;
+}
+i {
+	font-style: italic;
+}
 
-blockquote, pre, figure { margin: 0; }
-p { display: block; margin: 0; }
-b { font-weight: bolder; }
-i { font-style: italic; }
-img { border: 0; }
-svg { fill: currentColor; }
-svg:not(:root) { overflow: hidden; }
+svg {
+	fill: currentColor;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
 
-/* Fix sub/sup to match Photoshop algorithms */
-sup, sub { line-height: 0; vertical-align: middle; font-size: 58.3%; position: relative; }
+/* Consistent superscript/subscript, font-size based on PhotoShop algorithm */
+sup, sub {
+	position: relative;
+	vertical-align: middle;
+	font-size: 58.3%;
+	line-height: 0;
+}
+
 /* ~33.3% up or down for superscript and subscript; You may need to adjust for custom fonts */
-sup { top: -0.33333em; }
-sub { top: 0.33333em; }
+sup {
+	top: -0.33333em;
+}
+sub {
+	top: 0.33333em;
+}
 
-html, body { height: 100%; width: 100%; }
-html { font: 100%/1.25 sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-rendering: optimizeLegibility; -webkit-font-smoothing: subpixel-antialiased; text-overflow: ellipsis; }
-body { padding: 0; margin: 0; overflow-x: hidden; overflow-y: scroll; }
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+html {
+	font: 20px/1.5 sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: subpixel-antialiased;
+	text-overflow: ellipsis;
+}
+
+body {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
