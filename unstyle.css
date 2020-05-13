@@ -14,7 +14,7 @@ section, article, header, main, footer, aside, p, details, address, nav, figure,
 }
 
 button, input, select {
-	unset: all;
+	all: unset;
 	display: inline-block;
 	cursor: pointer;
 }
